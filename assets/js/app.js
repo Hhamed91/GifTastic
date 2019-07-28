@@ -9,6 +9,8 @@ $(document).on("click", "button", function () {
         method: "GET"
     }).then(function (response) {
         for (var i = 0; i < 11; i++) {
+            console.log(response);
+
             $("#gif-view").append("<div>");
             $("#gif-view").attr("class", "divImg");
             $("#gif-view div:last-child").append("<img>");
@@ -28,6 +30,20 @@ $("input[type=submit]").on("click", function () {
     $("#buttons button:last-child").attr("value", newGiphy);
     $("#buttons button:last-child").text(newGiphy);
     event.preventDefault();
+});
+
+$(document).on("click", "img", function(){
+    var stillImg = $(this).attr("data-still");
+    var movingImg = $(this).attr("data-moving");
+    var imgSRC = $(this).attr("src");
+
+    if(imgSRC == stillImg){
+        $(this).attr("src", movingImg);
+    }else{
+        $(this).attr("src", stillImg);
+
+    }
+
 });
 
 
