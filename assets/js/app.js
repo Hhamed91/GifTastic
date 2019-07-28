@@ -27,11 +27,9 @@ $(document).on("click", "button", function () {
 $("input[type=submit]").on("click", function () {
     var newGiphy = $("input[type=text]").val();
     $("#buttons").append("<button>");
-    $("#buttons button").attr("value", newGiphy);
-    $("#buttons button").text(newGiphy);
+    $("#buttons button:last-child").attr("value", newGiphy);
+    $("#buttons button:last-child").text(newGiphy);
     event.preventDefault();
-
-
 });
 
 
