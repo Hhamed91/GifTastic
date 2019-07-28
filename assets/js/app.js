@@ -22,4 +22,22 @@ $(document).on("click", "button", function () {
         }
     });
 
+});
 
+$("input[type=submit]").on("click", function () {
+    var newGiphy = $("input[type=text]").val();
+    $("#buttons").append("<button>");
+    $("#buttons button").attr("value", newGiphy);
+    $("#buttons button").text(newGiphy);
+    event.preventDefault();
+
+
+});
+
+
+// $("#container :reset").on("click", function(){
+
+//     $("#gif-view").empty();
+
+
+// });
