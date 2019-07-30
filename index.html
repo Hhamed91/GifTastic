@@ -8,33 +8,30 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Gif-Finder</title>
+    <title>GifTastic</title>
 
 
 </head>
 
 <body>
-    <div class="container">
-        <span id="cata">Categories</span>
-        <div id="buttons">
-            <button value="deal with it">deal with it</button>
-            <button value="like a boss">like a boss</button>
-            <button value="fail">fail</button>
-            <button value="forever alone">forever alone</button>
-            <button value="donald trump">donald trump</button>
 
-        </div>
+    <div class="container">
+        <h1 id="cata">Categories</h1>
+        <div id="buttons"></div>
+
         <form>
             <label for="search">Search all the GIFs:</label>
             <input id="search" type="text">
-            <input type="submit" value="Find me dat meme">
-            <button id="reset">Clear</button>
+            <input type="submit" value="Find me dat meme" type="button" class="btn btn-success">
+            <button class="reset" type="button" class="btn btn-danger">Clear</button>
 
         </form>
-        <div id="gif-view"></div>
+
+        <div id="gif-Div"></div>
 
 
     </div>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

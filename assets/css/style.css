@@ -1,13 +1,36 @@
-img {  
-    width: 200px;
+#cata{
+color: red
+
+}
+button{
+    margin: 10px;
+    
+
+
+}
+
+.divImg {  
+    width: 400px;
     height: 300px;
-    overflow: hidden; 
+    margin: 20px;
+    /* overflow: hidden;  */
+    margin-bottom: 0px;
+    display: inline-block;
+
   }
   
   img {
     transition: 0.3s;
+
   }
   
   img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    cursor: pointer;
   }
+
+  .divImg span{
+    display: block;
+    text-align: center;
+  }
+  
