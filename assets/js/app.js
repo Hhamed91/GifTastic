@@ -20,7 +20,6 @@ function createButtons(btnName) {
 
 //on click function to create the image (with its moving and static link), title, rating
 $(document).on("click", ".btnCatagories", function () {
-    // $("#gif-Div").empty();
     var query = $(this).text();
     var gifURL = "https://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=VHJDVtFuD5EPwCfSorUoGJmO81lqGB0u&limit=10&offset=0&lang=en";
 
@@ -32,13 +31,12 @@ $(document).on("click", ".btnCatagories", function () {
         for (var i = 0; i < 11; i++) {
             // console.log(response);
 
-            var rating = $('<p>').text("Rating: " + response.data[i].rating);
             var title = $("<p>").text("Title: " + response.data[i].title);
-            var dBtn = $(`<button>`).text("Download");
+            var rating = $('<p>').text("Rating: " + response.data[i].rating);
+            var dBtn = $(`<a target="_blank"><button> Download </button></a>`).text("Download");
+                dBtn.attr("href", response.data[i].images.downsized_medium.url);
             dBtn.attr('class', 'dBtn');
-            // dBtn.click(window.open(img));
 
-            // var download= $(`<button class="btn"><i class="fa fa-download"></i> Download</button>>"`).text("download ->");
 
 
             var img = $(`<img>`);
@@ -47,7 +45,7 @@ $(document).on("click", ".btnCatagories", function () {
             img.attr('data-still', response.data[i].images.downsized_still.url);
             img.attr('href', response.data[i].url);
 
-            var divImg = $('<div class="giphyImg">').append(rating, title, img, dBtn);
+            var divImg = $('<div class="giphyImg">').append(title,rating, img, dBtn);
             $("#gif-Div").prepend(divImg);
 
             
@@ -58,14 +56,6 @@ $(document).on("click", ".btnCatagories", function () {
 
 });
 
-//Function to download the image
-$(document).on("click", ".dBtn", function(response){
-
-            var img =img.attr('src', response.data[i].images.downsized_still.url);
-
-    window.open(img);
-   
-});
 
 //On click event to switch between the still and moving src
 
