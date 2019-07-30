@@ -21,7 +21,6 @@ function createButtons(btnName) {
 //on click function to create the image (with its moving and static link), title, rating
 $(document).on("click", ".btnCatagories", function () {
     // $("#gif-Div").empty();
-    // $(".reset").empty();
     var query = $(this).text();
     var gifURL = "https://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=VHJDVtFuD5EPwCfSorUoGJmO81lqGB0u&limit=10&offset=0&lang=en";
 
@@ -37,6 +36,7 @@ $(document).on("click", ".btnCatagories", function () {
             var title = $("<p>").text("Title: " + response.data[i].title);
             var dBtn = $(`<button>`).text("Download");
             dBtn.attr('class', 'dBtn');
+            // dBtn.click(window.open(img));
 
             // var download= $(`<button class="btn"><i class="fa fa-download"></i> Download</button>>"`).text("download ->");
 
@@ -49,6 +49,8 @@ $(document).on("click", ".btnCatagories", function () {
 
             var divImg = $('<div class="giphyImg">').append(rating, title, img, dBtn);
             $("#gif-Div").prepend(divImg);
+
+            
         }
 
 
@@ -56,9 +58,12 @@ $(document).on("click", ".btnCatagories", function () {
 
 });
 
-$(document).on("click", ".dBtn", function(){
-    var downloadURL = response.data[i].images.downsized_medium.url
-    window.open(downloadURL);
+//Function to download the image
+$(document).on("click", ".dBtn", function(response){
+
+            var img =img.attr('src', response.data[i].images.downsized_still.url);
+
+    window.open(img);
    
 });
 
@@ -86,3 +91,12 @@ $("#sub").on("click", function(event) {
     event.preventDefault();
     $("#search").val("");
     });
+
+//Function to clear the images div when needed
+
+$(document).on("click", ".reset", function(){
+    $("#gif-Div").empty();
+    event.preventDefault();
+
+});
+
