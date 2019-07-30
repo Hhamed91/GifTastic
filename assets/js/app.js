@@ -49,7 +49,21 @@ $(document).on("click", ".btnCatagories", function () {
             $("#gif-Div").prepend(divImg);
         }
 
-    
+
     });
 
+});
+
+//On click event to switch between the still and moving src
+
+$(document).on("click", "img", function () {
+    var directSrc = $(this).attr("src");
+    var movingSrc = $(this).attr("data-moving");
+    var stillSrc = $(this).attr("data-still");
+
+    if (stillSrc == directSrc) {
+        $(this).attr('src', movingSrc);
+    } else {
+        $(this).attr('src', stillSrc)
+    }
 });

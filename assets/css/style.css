@@ -9,9 +9,9 @@ button{
 
 }
 
-.divImg {  
-    width: 400px;
-    height: 300px;
+img {  
+    width:350px;
+    height:250px ;
     margin: 20px;
     /* overflow: hidden;  */
     margin-bottom: 0px;
