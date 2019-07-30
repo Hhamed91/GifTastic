@@ -13,16 +13,24 @@ body{
       transform: scale(1.1);
       cursor: pointer;
     }
-    img{
+  img{
       width:300px;
       height:200px;
       float: none;
   }
+  
   .giphyImg{
       display:inline-block;
-      margin:20px;
+      margin: 5px;
       border:solid 2px  rgb(178, 178, 234);
+      justify-content: space-between;
+  
   }
+  
+  .power{
+    border-radius: 10px;
+  }
+  
   .btnCatagories{
       width:150px;
       border-radius: 10px;
@@ -32,37 +40,52 @@ body{
       cursor: pointer;
       color: white;
     }
+  
   .btnCatagories:hover {
       background-color: RoyalBlue;
     }
     #gif-Div,#buttons{
       text-align: center;
   }
-    #cata{
+  #cata{
       color: black;
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
+  
   #form{
       text-align:middle;
-      margin:10px;
+      margin-left:200px;
     }
+  
     #search{
       width: 250px;
       height: 30px;
       border-radius: 10px;
       background-color:lightgrey;
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
   }
   #label{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background: rgb(242, 250, 252);
-    border-radius: 10px;
+    border-radius: 15px 50px 30px 5px;
   }
+  
+  
   h2{
       text-align: center;
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
      /* box-sizing: border-box; */
   }
+  p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    Background-color: lightsalmon;
+    background-color:lightgrey;
+  
+  }
+  
+  
   #sub{
     width:150px;
     border-radius: 10px;
@@ -72,6 +95,7 @@ body{
     cursor: pointer;
     color: whitesmoke;
   }
+  
   .reset{
     border-radius: 10px;
     background-color: lightgreen;
@@ -79,7 +103,9 @@ body{
     margin:10px;
     cursor: pointer;
     color: black;
+  
   }
+  
   .dBtn {
     background-color: pink;
     border: none;
@@ -88,4 +114,10 @@ body{
     cursor: pointer;
     font-size: 20px;
     border-radius: 10px;
+  
   }
+  
+  @media (max-width: 800px) {
+    .container {
+      flex-direction: column-reverse;
+    }

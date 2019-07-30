@@ -86,6 +86,9 @@ $("#sub").on("click", function(event) {
 
 $(document).on("click", ".reset", function(){
     $("#gif-Div").empty();
+    $("#gif-Div").html(`<h3>Power by Giphy API</h3>`);
+    $("#gif-Div").append(`<img class= "power" src="assets/img/giphy.gif" atl="Giphy">`);
+
     event.preventDefault();
 
 });
