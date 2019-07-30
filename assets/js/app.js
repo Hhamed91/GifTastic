@@ -67,3 +67,14 @@ $(document).on("click", "img", function () {
         $(this).attr('src', stillSrc)
     }
 });
+
+
+//Function to add a new btn when submitted
+
+$("#sub").on("click", function(event) {
+    var newTopic = $("#search").val();
+    createButtons(newTopic);
+    topics.push(newTopic);
+    event.preventDefault();
+    $("#search").val("");
+    });
