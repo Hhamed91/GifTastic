@@ -21,7 +21,7 @@ function createButtons(btnName) {
 //on click function to create the image (with its moving and static link), title, rating
 $(document).on("click", ".btnCatagories", function () {
     // $("#gif-Div").empty();
-    // $("#container :reset").empty();
+    // $(".reset").empty();
     var query = $(this).text();
     var gifURL = "https://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=VHJDVtFuD5EPwCfSorUoGJmO81lqGB0u&limit=10&offset=0&lang=en";
 
@@ -35,23 +35,31 @@ $(document).on("click", ".btnCatagories", function () {
 
             var rating = $('<p>').text("Rating: " + response.data[i].rating);
             var title = $("<p>").text("Title: " + response.data[i].title);
+            var dBtn = $(`<button>`).text("Download");
+            dBtn.attr('class', 'dBtn');
 
-            // var downloadB =$("<button class='downloadButton'>").text("download")
+            // var download= $(`<button class="btn"><i class="fa fa-download"></i> Download</button>>"`).text("download ->");
+
 
             var img = $(`<img>`);
             img.attr('src', response.data[i].images.downsized_still.url);
             img.attr('data-moving', response.data[i].images.downsized_medium.url);
             img.attr('data-still', response.data[i].images.downsized_still.url);
+            img.attr('href', response.data[i].url);
 
-            // img.attr('href', response.data[x].url);
-
-            var divImg = $('<div class="giphyImg">').append(rating, title, img);
+            var divImg = $('<div class="giphyImg">').append(rating, title, img, dBtn);
             $("#gif-Div").prepend(divImg);
         }
 
 
     });
 
+});
+
+$(document).on("click", ".dBtn", function(){
+    var downloadURL = response.data[i].images.downsized_medium.url
+    window.open(downloadURL);
+   
 });
 
 //On click event to switch between the still and moving src
