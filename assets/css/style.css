@@ -1,36 +1,63 @@
 #cata{
-color: red
-
+color:rgb(67, 14, 67);
 }
-button{
-    margin: 10px;
-    
-
-
-}
-
-img {  
-    width:350px;
-    height:250px ;
-    margin: 20px;
-    /* overflow: hidden;  */
-    margin-bottom: 0px;
-    display: inline-block;
-
-  }
   
-  img {
+img {
     transition: 0.3s;
 
   }
   
-  img:hover {
+img:hover {
     transform: scale(1.1);
     cursor: pointer;
   }
 
-  .divImg span{
-    display: block;
-    text-align: center;
+.btnCatagories{
+    width:150px;
+    border-radius: 10px;
+    background-color:rgb(158, 140, 194);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin:10px;
+
   }
-  
+
+#form{
+    text-align:middle;
+    margin:10px;
+
+
+  }
+
+  #search{
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+#gif-Div,#buttons{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(224, 212, 249);
+}
+
+#gif-div.div{
+    /* display: inline-block;
+    margin: 10px; */
+}
+img{
+    width:300px;
+    height:200px;
+    float: none;
+}
+
+.giphyImg{
+    display:inline-block;
+    margin:50px;
+    border:solid 2px  rgb(178, 178, 234);
+
+}
+

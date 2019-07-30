@@ -38,7 +38,7 @@ $(document).on("click", ".btnCatagories", function () {
 
             // var downloadB =$("<button class='downloadButton'>").text("download")
 
-            var img = $("<img>");
+            var img = $(`<img>`);
             img.attr('src', response.data[i].images.downsized_still.url);
             img.attr('data-moving', response.data[i].images.downsized_medium.url);
             img.attr('data-still', response.data[i].images.downsized_still.url);
