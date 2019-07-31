@@ -54,21 +54,26 @@ body{
   
   #form{
       text-align:middle;
-      margin-left:200px;
+      /* margin-left:200px; */
+      background-image: url("https://media.giphy.com/media/26vIfKPhul7N5xhm0/giphy.gif");
+      background-repeat: no-repeat
     }
   
-    #search{
+  #search{
       width: 250px;
       height: 30px;
       border-radius: 10px;
       background-color:lightgrey;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
   }
   #label{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background: rgb(242, 250, 252);
     border-radius: 15px 50px 30px 5px;
+  }
+
+  #search, #label, #sub{
+      float: right;
   }
   
   
