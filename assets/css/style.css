@@ -72,8 +72,14 @@ body{
     border-radius: 15px 50px 30px 5px;
   }
 
-  #search, #label, #sub{
+  #search, #label, #sub, .reset{
       float: right;
+      margin: 10px;
+  }
+
+  .jumbotron{
+      margin: 40px;
+      padding: 100px;
   }
   
   
